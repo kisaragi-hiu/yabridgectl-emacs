@@ -3,5 +3,5 @@
 
 (package-file "yabridgectl.el")
 
-(development
- (depends-on "buttercup"))
+;; (development
+;;  (depends-on "buttercup"))
