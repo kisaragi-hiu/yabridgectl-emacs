@@ -2,7 +2,7 @@
 
 ;; Author: Kisaragi Hiu
 ;; Version: 0.1
-;; Package-Requires: ((emacs "28.1"))
+;; Package-Requires: ((emacs "25.1"))
 ;; Homepage: https://github.com/kisaragi-hiu/yabridgectl.el
 ;; Keywords: convenience UI yabridgectl
 
