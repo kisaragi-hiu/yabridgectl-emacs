@@ -109,17 +109,15 @@ LABEL defaults to PATH."
     (while (re-search-forward ", \\(copy\\)" nil t)
       (put-text-property
        (match-beginning 1) (match-end 1)
-       'face 'match)))
+       'face '(italic font-lock-doc-face))))
   (save-excursion
-    (while (re-search-forward ":: \\(VST2\\)" nil t)
+    (while (re-search-forward "^  \\(.*?\\) :: \\(VST[23]\\)" nil t)
       (put-text-property
        (match-beginning 1) (match-end 1)
+       'face 'font-lock-function-name-face)
+      (put-text-property
+       (match-beginning 2) (match-end 2)
        'face 'font-lock-constant-face)))
-  (save-excursion
-    (while (re-search-forward ":: \\(VST3\\)" nil t)
-      (put-text-property
-       (match-beginning 1) (match-end 1)
-       'face 'font-lock-keyword-face)))
   (save-excursion
     (while (re-search-forward ", \\(not yet installed\\)" nil t)
       (replace-match
