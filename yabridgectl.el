@@ -142,7 +142,7 @@ LABEL defaults to PATH."
          (format "%s %s:"
                  (yabridgectl--buttons/rm path)
                  (yabridgectl--buttons/link path
-                                         (abbreviate-file-name path)))))
+                                            (abbreviate-file-name path)))))
       (forward-line)
       (unless (looking-at (rx bol "  "))
         (insert "  No plugins found at this location\n")))))
@@ -202,6 +202,8 @@ LABEL defaults to PATH."
       (goto-char p))))
 
 ;;;; * Entry point
+
+;;;###autoload
 (defun yabridgectl ()
   "Yabridgectl."
   (interactive)
